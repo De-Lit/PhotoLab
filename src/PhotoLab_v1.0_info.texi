@@ -1,0 +1,59 @@
+\input texinfo
+
+@settitle PhotoLab Manual
+
+@copying
+This is a manual for PhotoLab
+
+Copyright @copyright{} 2023 noisejaq_toppingk_serramor_team.
+@end copying
+
+@ifnottex
+@node Top
+@top Description of the work of the PhotoLab program
+
+В данном проекте реализовано приложение для наложения различных фильтров свертки (англ. convolution filter) на изображение. 
+Такие фильтры используются для размытия изображения, повышения четкости, контурирования, создания эффекта барельефа и наложения многих других различных эффектов.
+
+@end ifnottex
+
+@title Описание функционала PhotoLab
+@itemize @bullet
+@item Программа разработана на языке C++ стандарта C++17
+@item Обеспечено покрытие unit-тестами модулей, реализующих бизнес-логику приложения, с помощью библиотеки GTest
+@item Сборка программы настроена с помощью Makefile со стандартным набором целей для GNU-программ: all, install, uninstall, clean, dvi, dist, tests, gcov_report
+@item Графический пользовательский интерфейс реализован на базе Qt
+@end itemize
+
+@title Приложение предоставляет следующие возможности:
+@itemize @bullet
+@item Загружать произвольное изображение
+@item Применять фильтр из пула готовых фильтров
+@item Применять на изображение произвольную матрицу ядра фильтра (размером до 17x17) вручную через отдельное диалоговое окно
+@item Сохранять результат фильтрации в отдельный файл
+@end itemize
+
+@title Пул готовых фильтров:
+@itemize @bullet
+@item Обесцвечивание (без использования свертки)
+@item Негатив (без использования свертки)
+@item Тонирование (по аналогии с обесцвечиванием, но в оттенках указанного на палитре цвета)
+@item Барельеф (Emboss)
+@item Повышение резкости (Sharpen)
+@item Блочное размытие (Box blur)
+@item Гауссово размытие (Gaussian blur)
+@item Фильтр Лапласа (Laplacian filter)
+@item Фильтр Собеля (Sobel filter)
+@item Фильтр Собеля левый (Sobel filter left)
+@item Фильтр Собеля правый (Sobel filter right)
+@end itemize
+
+@titlepage
+@title PhotoLab
+
+@page
+@vskip 0pt plus 1fill
+@insertcopying
+@end titlepage
+
+@bye
